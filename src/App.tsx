@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Slider from "./components/Slider";
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <div className="app">
+      <Slider />
+    </div>
+  );
+};
 
-export default App
+export default App;
