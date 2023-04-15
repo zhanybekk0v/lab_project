@@ -1,53 +1,113 @@
-.main{
+.main {
   display: flex;
   justify-content: center;
   margin: 50px 0;
   width: 100%;
 }
 
-.slider{
-  width: 600px;
+.slider {
+  width: 1200px;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
 }
 
-.slider__line{
+.slider__line {
   display: flex;
   transition: all 1s;
 }
 
-.slider__img{
-  width: 600px;
-  height: 400px;
+.slider__img {
+  width: 1200px;
+  height: 700px;
+  position: relative;
 }
 
-.slider__btn-prev{
+.slider__img img {
+  width: 1200px;
+  height: 700px;
+
+}
+
+.slider__btn-prev {
   position: absolute;
-  left: 0px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%) rotate(180deg);
-  font-size: 30px;
+  font-size: 35px;
   color: rgba(255, 255, 255, 0.849);
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.849);
+  padding: 0 10px;
   line-height: 1;
 }
 
-.slider__btn-next{
+.slider__btn-next {
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 30px;
-
+  font-size: 35px;
   color: rgba(255, 255, 255, 0.849);
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.849);
   line-height: 1;
+  padding: 0 10px;
 }
 
-.slider__btn-prev:hover, .slider__btn-next:hover {
+.slider__btn-prev:hover,
+.slider__btn-next:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.541);
+}
+
+.btn_more {
+  position: absolute;
+  top: 90%;
+  left: 5%;
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.849);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.849);
+  transition: 0.5s;
+}
+
+.btn_more:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.541);
+  transition: 0.5s;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 2em 0;
+}
+
+.pagination span {
+  background: #111;
+  box-shadow:
+    inset -1px -1px #555,
+    inset 1px 1px #000;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: #fff;
+  box-shadow: 0 0 0.5em #0352fc;
+}
+
+@keyframes textChange {
+  50% {
+    bottom: -5em;
+  }
+
+  100% {
+    bottom: 0;
+  }
 }
