@@ -1,42 +1,10 @@
-// import React, { useState } from 'react'
-// import first_img from '../assets/image/1.jpg'
-// import second_img from '../assets/image/2.jpg'
-// import third_img from '../assets/image/3.jpg'
-// import './Slider.css'
-
-// const Slider = () => {
-
-//   const [slider, setSlider] = useState(0)
-
-
-//     function renderRolls() {
-
-//     }
-
-//   return (
-//     <div>
-//       <main className='main'>
-//         <div className="slider">
-//           <div className="slider__line">
-
-//             <img className='slider__img' src={first_img} alt="" />
-//             <img className='slider__img' src={second_img} alt="" />
-//             <img className='slider__img' src={third_img} alt="" />
-//           </div>
-//           <button className='slider__btn-prev'>&#10148;</button>
-//           <button className='slider__btn-next'>&#10148;</button>
-//         </div>
-//       </main>
-//     </div>
-//   )
-// }
-// export default Slider
 import React, { useState, useRef, useEffect } from 'react';
 import './Slider.css';
 
 import SliderImage1 from '../assets/image/1.jpg';
 import SliderImage2 from '../assets/image/2.jpg';
 import SliderImage3 from '../assets/image/3.jpg';
+import SiderGif from '../assets/image/mersedes_gif.webp'
 
 interface SliderImage {
   id: number;
@@ -51,6 +19,7 @@ const Slider = (): JSX.Element => {
     { id: 1, src: SliderImage1 },
     { id: 2, src: SliderImage2 },
     { id: 3, src: SliderImage3 },
+    { id: 4, src: SiderGif }
   ];
 
   const sliderLine = useRef<HTMLDivElement>(null);
@@ -83,9 +52,9 @@ const Slider = (): JSX.Element => {
     }
   }, [sliderCount, sliderWidth]);
 
-  setInterval(() => {
-    nextSlide()
-  }, 5000);
+  // setInterval(() => {
+  //   nextSlide()
+  // }, 10000);
 
   return (
     <div className="slider">
@@ -93,7 +62,7 @@ const Slider = (): JSX.Element => {
         {sliderImages.map((image: SliderImage) => (
           <div key={image.id} className="slider__img">
             <img src={image.src} alt="" />
-            <button>more</button>
+            <button className='btn_more'>more</button>
           </div>
         ))}
       </div>
@@ -103,6 +72,11 @@ const Slider = (): JSX.Element => {
       <button className="slider__btn-next" onClick={nextSlide}>
         &#10148;
       </button>
+      <div className="pagination">
+        <span className="active"></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   );
 };
