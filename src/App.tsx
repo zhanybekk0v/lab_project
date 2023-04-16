@@ -1,17 +1,12 @@
-import React from 'react'
-import {BrowserRouter} from 'react-router-dom'
-import Navbar from './Navbar/Navbar'
-import Slider from './Slider/Slider'
+import React from "react";
+import Router from "./Router/Router";
 
 const App = () => {
   return (
     <>
-      <BrowserRouter>
-          <Navbar />
-          <Slider />
-      </BrowserRouter>
+      <Router />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
