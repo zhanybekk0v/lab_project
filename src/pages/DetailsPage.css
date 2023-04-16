@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   padding: 1em;
+  margin-top: 50px;
+
 }
 
 .details_inner {
@@ -17,9 +19,18 @@
 }
 
 .details__img {
-  position: absolute;
+  position: relative;
   width: 70%;
   z-index: -1;
+}
+
+.video-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  margin: 0 auto;
+  height: 550px;
 }
 
 .details__title {

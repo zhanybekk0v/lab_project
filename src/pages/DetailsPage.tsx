@@ -10,6 +10,7 @@ interface Product {
   title: string;
   price: number;
   characters: string;
+  video?: undefined;
 }
 
 const DetailsPage = () => {
@@ -31,6 +32,7 @@ const DetailsPage = () => {
           src={oneProduct?.image}
           alt="image"
         />
+        <video className="video-slider" autoPlay muted loop src={oneProduct?.video}></video>
         <div className="details__title">
           <h2>{oneProduct?.title}</h2>
           <p>{oneProduct?.description}</p>
